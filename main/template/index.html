@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Products</title>
+    </head>
+    <body style="background-color: darkslategrey;color: rgb(255, 255, 255); ">
+
+
+            
+            <table>
+                <a href="/create"><p>Добавить пользователя</p></a>
+                <a href="/create_post"><p>Добавить cтатью</p></a>
+                <thead><th>Id</th><th>Name</th><th>Surname</th></thead>
+                {{range . }}
+                <tr>
+                    
+                    <!-- <td>{{.Id}}</td> -->
+                    <td>{{.Id}}</td>
+                    <td>{{.Name}}</td>
+                    <td>{{.Surname}}</td>
+                    <td>
+                        <a href="/change/{{.Id}}">Изменить</a>
+                        <a href="/delete/{{.Id}}">Удалить</a>
+                    </td>
+                </tr>
+                
+                {{end}}
+
+
+                <h1>fasfsaf</h1>
+            </table>  
+        </body>
+</html>
